@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webpage.css">
+    <title>Blue Heading Web Page</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.10.1"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+
+    
+
+
+</head>
+<body>
+    <header>
+        <h1 class="Main-Heading">Covid mobility</h1>
+    </header>
+
+  
+
+    <script src="script.js"></script>
+
+    <h1 id="heading"></h1>
+
+    <div class="province-content">
+        <label for="provinceDropdown">Select Province:</label>
+        <select id="provinceDropdown">
+          <option value="ZA-FS">Free State</option>
+          <!-- <option value="kzn">KZN</option>
+          <option value="western cape">Western Cape</option> -->
+          <!-- Add more options as needed -->
+        </select>
+        <button onclick="searchByProvince()" >Select</button>
+
+    </div>
+    <!-- <script src="script.js"></script> -->
+
+    <canvas id="retailChart" width="40" height="20"></canvas>
+    <canvas id="groceryChart" width="40" height="20"></canvas>
+    <canvas id="parksChart" width="40" height="20"></canvas>
+    <canvas id="transportChart" width="40" height="20"></canvas>
+    <canvas id="workplaceChart" width="40" height="20"></canvas>
+    <canvas id="residentialChart" width="40" height="20"></canvas>
+    </script>
+</body>
+</html>
