@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>u1909667_GMT320A_Assignment2</title>
+ <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+ 
+ <div id="Div1"></div>
+ <div id="Div2"></div>
+ <div id="Div3"></div>
+
+ <script>
+ //Averages for Retail and Recreation from excell, converted to pie chart percentages
+ var averages = [24.90, 18.78, 37.93, 26.59, 16.54, 71.91, 43.69, 53.23, 61.17, 5.27];
+ var categories = ['No Province', 'EC', 'FS', 'GT', 'KZN', 'LP', 'MP', 'NW', 'NC', 'WC'];
+
+ //Create pie chart
+ var dataPie = [{
+ values: averages,
+ labels: categories,
+ type: 'pie'
+ }];
+
+ var layoutPie = {
+ title: 'Averages for Retail and Recreation change from baseline'
+ };
+
+ Plotly.newPlot('Div1', dataPie, layoutPie);
+
+
+
+//Averages for Parks from excell
+var averagesBar = [53.82, 123.95, 53.33, 13.41, 101.75, 119.62, 126.59, 109.34, 51.64, -9.39];
+ var categoriesBar = ['No Province', 'EC', 'FS', 'GT', 'KZN', 'LM', 'MP', 'NW', 'NC', 'WC'];
+
+ //Create bar chart
+ var dataBar = [{
+ x: categoriesBar,
+ y: averagesBar,
+ type: 'bar'
+ }];
+
+ var layoutBar = {
+ title: 'Averages for Parks from baseline',
+ xaxis: {
+  tickangle: -45
+ }
+ };
+
+ Plotly.newPlot('Div2', dataBar, layoutBar);
+
+
+
+//Averages for Transit Stations from excell
+var averagesLine = [17.56, 21.84, 53.28, 24.77, -4.11, 97.25, 178.38, 109.83, 17.33, -17.92];
+ var categoriesLine = ['No Province', 'EC', 'FS', 'GT', 'KZN', 'LM', 'MP', 'NW', 'NC', 'WC'];
+
+
+ //Create line chart
+ var dataLine = [{
+ x: categoriesLine,
+ y: averagesLine,
+ type: 'scatter',
+ mode: 'lines+markers',
+ name: 'Average Values'
+ }];
+
+ var layoutLine = {
+ title: 'Averages for Transit Stations change from baseline'
+ };
+
+ Plotly.newPlot('Div3', dataLine, layoutLine);
+ </script>
+ 
+</body>
+</html>
